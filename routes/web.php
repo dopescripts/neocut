@@ -25,3 +25,4 @@ Route::get('/services', [\App\Http\Controllers\ServicesController:: class, 'serv
 Route::get('/portfolio', [\App\Http\Controllers\PortfolioController:: class, 'portfolio']) ->name('portfolio');
 #ADMIN DASHBOARD ROUTE
 Route::get('/admin/dashboard', [\App\Http\Controllers\AdminHomeController:: class, 'index']) ->name('home');
+Route::get('/admin/create', [\App\Http\Controllers\AdminHomeController::class, 'create'])->name('create');
