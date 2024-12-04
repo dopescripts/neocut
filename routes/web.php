@@ -26,3 +26,4 @@ Route::get('/portfolio', [\App\Http\Controllers\PortfolioController:: class, 'po
 #ADMIN DASHBOARD ROUTE
 Route::get('/admin/dashboard', [\App\Http\Controllers\AdminHomeController:: class, 'index']) ->name('home');
 Route::get('/admin/create', [\App\Http\Controllers\AdminHomeController::class, 'create'])->name('create');
+Route::get('/admin/table', [\App\Http\Controllers\AdminHomeController::class, 'table'])->name('table');

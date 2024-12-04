@@ -1,8 +1,8 @@
 @extends('admin.layout.app')
 @section('content')
     <div class="container-xl flex-grow-1 container-p-y">
-        <div class="my-5">
-            <form action="{{Route('user.create')}}" method="post">
+        <div class="my-5 col-md-7">
+            <form action="" method="post">
                 @csrf
                 <div class="mb-3">
                     <label for="" class="form-label">Name</label>
