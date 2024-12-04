@@ -20,7 +20,7 @@
                     <td>{{$register->name}}</td>
                     <td>{{$register->email}}</td>
                     <td>{{$register->handle}}</td>
-                    <td><button class="btn btn-primary">Edit</button></td>
+                    <td><a href="#" class="btn btn-primary">Edit</a></td>
                     <td><button class="btn btn-danger">Delete</button></td>
                   </tr>
                   @endforeach

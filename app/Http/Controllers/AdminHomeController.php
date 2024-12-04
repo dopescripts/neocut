@@ -25,4 +25,7 @@ class AdminHomeController extends Controller
         $register->save();
         return redirect()->back();
     }
+    // public function register_edit($id){
+    //     $register = register::findorfail($id);
+    // }
 }
