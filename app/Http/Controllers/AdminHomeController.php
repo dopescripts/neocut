@@ -25,7 +25,18 @@ class AdminHomeController extends Controller
         $register->save();
         return redirect()->back();
     }
-    // public function register_edit($id){
-    //     $register = register::findorfail($id);
-    // }
+    public function register_edit(Request $request, $id){
+        $register = register::find($id);
+        return view('admin.pages.edit', compact('register'));
+    }
+    public function register_update(Request $request, $id)
+    {
+        $register = register::find($id);
+        $register->name = $request->name;
+        $register->email = $request->email;
+        $register->handle = $request->handle;
+        $register->password = $request->password;
+        $register->save();
+        return redirect()->back();
+    }
 }

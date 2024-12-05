@@ -20,7 +20,7 @@
                     <td>{{$register->name}}</td>
                     <td>{{$register->email}}</td>
                     <td>{{$register->handle}}</td>
-                    <td><a href="#" class="btn btn-primary">Edit</a></td>
+                    <td><a href="{{route('register.edit', $register->id)}}" class="btn btn-primary">Edit</a></td>
                     <td><button class="btn btn-danger">Delete</button></td>
                   </tr>
                   @endforeach
