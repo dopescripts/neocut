@@ -12,6 +12,7 @@ class AdminHomeController extends Controller
     public function create(){
         return view('admin.pages.create');
     }
+
     public function table(){
         $register = register::all();
         return view('admin.pages.table', compact('register'));
