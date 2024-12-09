@@ -30,3 +30,4 @@ Route::get('/admin/table', [App\Http\Controllers\AdminHomeController::class, 'ta
 Route::post('register/store', [App\Http\Controllers\AdminHomeController:: class, 'register_store'])->name('register.store');
 Route::get('admin/edit{id}', [App\Http\Controllers\AdminHomeController::class, 'register_edit'])->name('register.edit');
 Route::post('admin/update{id}', [App\Http\Controllers\AdminHomeController::class, 'register_update'])->name('register.update');
+Route::get('admin/delete{id}', [App\Http\Controllers\AdminHomeController::class, 'register_delete'])->name('register.delete');

@@ -40,4 +40,10 @@ class AdminHomeController extends Controller
         $register->save();
         return redirect()->back();
     }
+
+    public function register_delete($id){
+        $register = register::find($id);
+        $register->delete();
+        return redirect()->back();
+    }
 }

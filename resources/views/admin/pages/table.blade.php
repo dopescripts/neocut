@@ -21,7 +21,7 @@
                     <td>{{$register->email}}</td>
                     <td>{{$register->handle}}</td>
                     <td><a href="{{route('register.edit', $register->id)}}" class="btn btn-primary">Edit</a></td>
-                    <td><button class="btn btn-danger">Delete</button></td>
+                    <td><a href="{{route('register.delete', $register->id)}}" class="btn btn-danger">Delete</a></td>
                   </tr>
                   @endforeach
                 </tbody>
