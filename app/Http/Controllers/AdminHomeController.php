@@ -3,11 +3,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\register;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 class AdminHomeController extends Controller
 {
     public function index(){
-        return view('admin.pages.home');
+        if (Auth::check()) {
+            return view('admin.pages.home');
+        }
+        else {
+            return redirect()->route('admin.login');
+        }
     }
     public function create(){
         return view('admin.pages.create');

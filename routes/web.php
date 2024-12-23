@@ -24,10 +24,14 @@ Route::get('/services', [App\Http\Controllers\ServicesController:: class, 'servi
 #portfolio route
 Route::get('/portfolio', [App\Http\Controllers\PortfolioController:: class, 'portfolio']) ->name('portfolio');
 #ADMIN DASHBOARD ROUTE
-Route::get('/admin/dashboard', [App\Http\Controllers\AdminHomeController:: class, 'index']) ->name('home');
+Route::get('/admin/dashboard', [App\Http\Controllers\AdminHomeController:: class, 'index']) ->name('admin.home');
 Route::get('/admin/create', [App\Http\Controllers\AdminHomeController::class, 'create'])->name('create');
 Route::get('/admin/table', [App\Http\Controllers\AdminHomeController::class, 'table'])->name('table');
 Route::post('register/store', [App\Http\Controllers\AdminHomeController:: class, 'register_store'])->name('register.store');
 Route::get('admin/edit{id}', [App\Http\Controllers\AdminHomeController::class, 'register_edit'])->name('register.edit');
 Route::post('admin/update{id}', [App\Http\Controllers\AdminHomeController::class, 'register_update'])->name('register.update');
 Route::get('admin/delete{id}', [App\Http\Controllers\AdminHomeController::class, 'register_delete'])->name('register.delete');
+Auth::routes();
+
+Route::get('/login', [App\Http\Controllers\HomeController::class, 'login'])->name('login');
+Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('admin.logout');

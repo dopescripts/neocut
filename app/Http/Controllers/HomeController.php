@@ -9,4 +9,7 @@ class HomeController extends Controller
     public function home(){
         return view('web.pages.home');
     }
+    public function login(){
+        return view('auth.login');
+    }
 }
