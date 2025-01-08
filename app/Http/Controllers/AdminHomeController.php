@@ -8,12 +8,18 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 class AdminHomeController extends Controller
 {
+    /**
+     * Check if user is authenticated, if yes show the admin homepage
+     * otherwise redirect to admin login page
+     *
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse
+     */
     public function index(){
         if (Auth::check()) {
             return view('admin.pages.home');
         }
         else {
-            return redirect()->route('admin.login');
+            return redirect()->route('login');
         }
     }
     public function create(){
